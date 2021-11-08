@@ -12,7 +12,7 @@ header_font = "Arial-16"
 window_width = 800
 """Ширина окна"""
 
-window_height = 800
+window_height = 500
 """Высота окна"""
 
 scale_factor = None
@@ -39,7 +39,7 @@ def scale_x(x):
     **x** — x-координата модели.
     """
 
-    return int(x*scale_factor) + window_width//2
+    return int(float(x)*float(scale_factor)) + window_width//2 - 50
 
 
 def scale_y(y):
@@ -54,7 +54,7 @@ def scale_y(y):
     **y** — y-координата модели.
     """
 
-    return -(int(y*scale_factor) + window_height//2)  # FIXME: not done yet
+    return (int(y*scale_factor) + window_height//2)  # FIXME: not done yet
 
 
 def create_star_image(space, star):
